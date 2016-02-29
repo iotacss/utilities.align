@@ -1,0 +1,21 @@
+{
+  "name": "iotacss-align",
+  "version": "0.1.0",
+  "description": "Align utilities for iotaCSS",
+  "main": "_utilities.align.scss",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:iotacss/utilities.align.git"
+  },
+  "keywords": [
+    "iotacss",
+    "css",
+    "bem",
+    "oocss"
+  ],
+  "dependencies": {
+    "iotacss-default": "0.1.0",
+    "iotacss-breakpoint": "0.1.0"
+  },
+  "author": "Dimitris Psaropoulos <info@harby.me>"
+}

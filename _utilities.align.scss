@@ -1,0 +1,68 @@
+//  Align Utilities
+
+
+
+
+//  Dependencies:
+//    Settings.Default
+//    Settings.Breakpoint
+
+
+
+
+// Options
+
+$iota-align      : true;
+$iota-align--res : false !default;
+
+
+
+
+.#{$iota-utility-namespace}align-top {
+  vertical-align: top !important;
+}
+
+.#{$iota-utility-namespace}align-bottom {
+  vertical-align: bottom !important;
+}
+
+.#{$iota-utility-namespace}align-middle {
+  vertical-align: middle !important;
+}
+
+.#{$iota-utility-namespace}align-baseline {
+  vertical-align: baseline !important;
+}
+
+
+
+
+// Responsive Align Utilities
+
+@if ($iota-align--res == true) {
+
+  @each $name, $size in $iota-breakpoint-sizes {
+
+    @media #{$size} {
+    
+      .#{$iota-utility-namespace}align-top\@#{$name} {
+        vertical-align: top !important;
+      }
+
+      .#{$iota-utility-namespace}align-bottom\@#{$name} {
+        vertical-align: bottom !important;
+      }
+
+      .#{$iota-utility-namespace}align-middle\@#{$name} {
+        vertical-align: middle !important;
+      }
+
+      .#{$iota-utility-namespace}align-baseline\@#{$name} {
+        vertical-align: baseline !important;
+      }
+
+    }
+
+  }
+  
+}
