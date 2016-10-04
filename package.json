@@ -1,6 +1,6 @@
 {
   "name": "iotacss-align",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Align utilities for iotaCSS",
   "main": "_utilities.align.scss",
   "repository": {
