@@ -19,7 +19,11 @@ npm install --save iotacss-align
 ### Options ###
 
 ```
-$iota-align--res : false !default;
+$iota-align--res                : false !default;
+$iota-align-top-namespace       : 'align-top' !default;
+$iota-align-bottom-namespace    : 'align-bottom' !default;
+$iota-align-middle-namespace    : 'align-middle' !default;
+$iota-align-baseline-namespace  : 'align-baseline' !default;
 ```
 
 
@@ -35,3 +39,4 @@ $iota-align--res : false !default;
 // Responsive Class Syntax
 
 .u-[name]@[breakpoint-name]  // Example: .u-align-top@sm
+```

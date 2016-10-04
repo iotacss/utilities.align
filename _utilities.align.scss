@@ -12,25 +12,29 @@
 
 // Options
 
-$iota-align      : true;
-$iota-align--res : false !default;
+$iota-align                     : true;
+$iota-align--res                : false !default;
+$iota-align-top-namespace       : 'align-top' !default;
+$iota-align-bottom-namespace    : 'align-bottom' !default;
+$iota-align-middle-namespace    : 'align-middle' !default;
+$iota-align-baseline-namespace  : 'align-baseline' !default;
 
 
 
 
-.#{$iota-utility-namespace}align-top {
+.#{$iota-utility-namespace}#{$iota-align-top-namespace} {
   vertical-align: top !important;
 }
 
-.#{$iota-utility-namespace}align-bottom {
+.#{$iota-utility-namespace}#{$iota-align-bottom-namespace} {
   vertical-align: bottom !important;
 }
 
-.#{$iota-utility-namespace}align-middle {
+.#{$iota-utility-namespace}#{$iota-align-middle-namespace} {
   vertical-align: middle !important;
 }
 
-.#{$iota-utility-namespace}align-baseline {
+.#{$iota-utility-namespace}#{$iota-align-baseline-namespace} {
   vertical-align: baseline !important;
 }
 
@@ -45,24 +49,24 @@ $iota-align--res : false !default;
 
     @media #{$size} {
     
-      .#{$iota-utility-namespace}align-top\@#{$name} {
+      .#{$iota-utility-namespace}#{$iota-align-top-namespace}\@#{$name} {
         vertical-align: top !important;
       }
 
-      .#{$iota-utility-namespace}align-bottom\@#{$name} {
+      .#{$iota-utility-namespace}#{$iota-align-bottom-namespace}\@#{$name} {
         vertical-align: bottom !important;
       }
 
-      .#{$iota-utility-namespace}align-middle\@#{$name} {
+      .#{$iota-utility-namespace}#{$iota-align-middle-namespace}\@#{$name} {
         vertical-align: middle !important;
       }
 
-      .#{$iota-utility-namespace}align-baseline\@#{$name} {
+      .#{$iota-utility-namespace}#{$iota-align-baseline-namespace}\@#{$name} {
         vertical-align: baseline !important;
       }
 
     }
 
   }
-  
+
 }
