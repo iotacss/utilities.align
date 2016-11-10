@@ -6,24 +6,21 @@ The align utility contains helper classes for the CSS vertical align property.
 ### Installation ###
 
 ```
-npm install --save iotacss-align
+npm install --save iotacss-utils-align
 ```
-
-
-### Dependencies ###
-
-* [Settings.Default](https://github.com/iotacss/settings.default)
-* [Settings.Breakpoint](https://github.com/iotacss/settings.breakpoint)
 
 
 ### Options ###
 
-```
-$iota-align--res                : false !default;
-$iota-align-top-namespace       : 'align-top' !default;
-$iota-align-bottom-namespace    : 'align-bottom' !default;
-$iota-align-middle-namespace    : 'align-middle' !default;
-$iota-align-baseline-namespace  : 'align-baseline' !default;
+```sass
+$iota-utils-align-namespace     : 'align-' !default;
+$iota-utils-align-top-name      : 'top' !default;
+$iota-utils-align-bottom-name   : 'bottom' !default;
+$iota-utils-align-middle-name   : 'middle' !default;
+$iota-utils-align-baseline-name : 'baseline' !default;
+
+$iota-utils-align-res           : false !default;
+$iota-utils-align-breakpoints   : $iota-global-breakpoints !default;
 ```
 
 

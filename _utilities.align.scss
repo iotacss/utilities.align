@@ -1,40 +1,46 @@
-//  Align Utilities
-
-
-
-
-//  Dependencies:
-//    Settings.Default
-//    Settings.Breakpoint
+//  Align Utility
 
 
 
 
 // Options
 
-$iota-align                     : true;
-$iota-align--res                : false !default;
-$iota-align-top-namespace       : 'align-top' !default;
-$iota-align-bottom-namespace    : 'align-bottom' !default;
-$iota-align-middle-namespace    : 'align-middle' !default;
-$iota-align-baseline-namespace  : 'align-baseline' !default;
+$iota-utils-align                : true;
+
+$iota-utils-align-namespace     : 'align-' !default;
+$iota-utils-align-top-name      : 'top' !default;
+$iota-utils-align-bottom-name   : 'bottom' !default;
+$iota-utils-align-middle-name   : 'middle' !default;
+$iota-utils-align-baseline-name : 'baseline' !default;
+
+$iota-utils-align-res           : false !default;
+$iota-utils-align-breakpoints   : $iota-global-breakpoints !default;
 
 
 
 
-.#{$iota-utility-namespace}#{$iota-align-top-namespace} {
+// Helper local variables
+
+$iota-utils-align-var-align: $iota-global-utilities-namespace + $iota-utils-align-namespace;
+
+
+
+
+// Align Utilities
+
+.#{$iota-utils-align-var-align + $iota-utils-align-top-name} {
   vertical-align: top !important;
 }
 
-.#{$iota-utility-namespace}#{$iota-align-bottom-namespace} {
+.#{$iota-utils-align-var-align + $iota-utils-align-bottom-name} {
   vertical-align: bottom !important;
 }
 
-.#{$iota-utility-namespace}#{$iota-align-middle-namespace} {
+.#{$iota-utils-align-var-align + $iota-utils-align-middle-name} {
   vertical-align: middle !important;
 }
 
-.#{$iota-utility-namespace}#{$iota-align-baseline-namespace} {
+.#{$iota-utils-align-var-align + $iota-utils-align-baseline-name} {
   vertical-align: baseline !important;
 }
 
@@ -43,25 +49,25 @@ $iota-align-baseline-namespace  : 'align-baseline' !default;
 
 // Responsive Align Utilities
 
-@if ($iota-align--res == true) {
+@if ($iota-utils-align-res == true) {
 
-  @each $name, $size in $iota-breakpoint-sizes {
+  @each $breakpoint-name, $breakpoint-size in $iota-utils-align-breakpoints {
 
-    @media #{$size} {
+    @media #{$breakpoint-size} {
     
-      .#{$iota-utility-namespace}#{$iota-align-top-namespace}\@#{$name} {
+      .#{$iota-utils-align-var-align + $iota-utils-align-top-name + $iota-global-breakpoint-separator + $breakpoint-name} {
         vertical-align: top !important;
       }
 
-      .#{$iota-utility-namespace}#{$iota-align-bottom-namespace}\@#{$name} {
+      .#{$iota-utils-align-var-align + $iota-utils-align-bottom-name + $iota-global-breakpoint-separator + $breakpoint-name} {
         vertical-align: bottom !important;
       }
 
-      .#{$iota-utility-namespace}#{$iota-align-middle-namespace}\@#{$name} {
+      .#{$iota-utils-align-var-align + $iota-utils-align-middle-name + $iota-global-breakpoint-separator + $breakpoint-name} {
         vertical-align: middle !important;
       }
 
-      .#{$iota-utility-namespace}#{$iota-align-baseline-namespace}\@#{$name} {
+      .#{$iota-utils-align-var-align + $iota-utils-align-baseline-name + $iota-global-breakpoint-separator + $breakpoint-name} {
         vertical-align: baseline !important;
       }
 
